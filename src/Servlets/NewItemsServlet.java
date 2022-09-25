@@ -11,11 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 
-@WebServlet (name = "NewSalesServlet", value = "/new-sales")
-public class NewSalesServlet extends HttpServlet {
+@WebServlet (name = "NewItemsServlet", value = "/new")
+public class NewItemsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ArrayList<Item> items = DBManager.getNewSellers();
+        ArrayList<Item> items = DBManager.getNewItems();
         request.setAttribute("items", items);
         request.getRequestDispatcher("/JSPs/new.jsp").forward(request, response);
     }

@@ -10,7 +10,7 @@
 <div class="container">
   <div class="row">
     <div class="col-6 mx-auto text-center" style="color: #2B2D42;">
-      <h1>New Sellers!</h1>
+      <h1>New!</h1>
       <h5>Browse our list of newly arrived products</h5>
     </div>
   </div>

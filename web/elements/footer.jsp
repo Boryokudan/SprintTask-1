@@ -24,7 +24,7 @@
         <div class="row d-flex align-items-center">
           <div class="col-md-7 col-lg-8 text-center text-md-start">
             <div class="p-3">
-              © 2022 Copyright:
+              <span>ZeroToOne&copy; 2022 Copyright:</span>
               <a class="text-white" href="#"
               >ZeroToOneLabs.qz</a
               >

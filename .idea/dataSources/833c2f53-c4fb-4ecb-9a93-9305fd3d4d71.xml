@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.43">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>4711</IntrospectionStateNumber>
+      <IntrospectionStateNumber>4722</IntrospectionStateNumber>
       <ServerVersion>14.5</ServerVersion>
       <StartupTime>1663235513</StartupTime>
       <TimeZones>true ACDT
@@ -259,10 +259,10 @@ false Antarctica/Davis
 false Antarctica/DumontDUrville
 false Antarctica/Macquarie
 false Antarctica/Mawson
-false Antarctica/McMurdo
+true Antarctica/McMurdo
 false Antarctica/Palmer
 false Antarctica/Rothera
-false Antarctica/South_Pole
+true Antarctica/South_Pole
 false Antarctica/Syowa
 true Antarctica/Troll
 false Antarctica/Vostok
@@ -651,8 +651,8 @@ false NOVT
 false NPT
 false NST
 false NUT
-false NZ
-false NZ-CHAT
+true NZ
+true NZ-CHAT
 true NZDT
 false NZST
 false NZT
@@ -678,9 +678,9 @@ false PWT
 true PYST
 false PYT
 false Pacific/Apia
-false Pacific/Auckland
+true Pacific/Auckland
 false Pacific/Bougainville
-false Pacific/Chatham
+true Pacific/Chatham
 false Pacific/Chuuk
 true Pacific/Easter
 false Pacific/Efate
@@ -800,20 +800,20 @@ false Zulu
 13388||10|C|G
 13388||-9223372036854775808|U|G
 13388||10|U|G</Grants>
-      <IntrospectionStateNumber>4711</IntrospectionStateNumber>
+      <IntrospectionStateNumber>4722</IntrospectionStateNumber>
       <ObjectId>16446</ObjectId>
       <Relations>sequence|table|16456|16457|1
 sequence|table|16465|16466|1
 </Relations>
       <OwnerName>postgres</OwnerName>
     </database>
-    <database id="3" parent="1" name="customer">
-      <ObjectId>16429</ObjectId>
-      <OwnerName>postgres</OwnerName>
-    </database>
-    <database id="4" parent="1" name="postgres">
+    <database id="3" parent="1" name="postgres">
       <Comment>default administrative connection database</Comment>
       <ObjectId>13754</ObjectId>
+      <OwnerName>postgres</OwnerName>
+    </database>
+    <database id="4" parent="1" name="customer">
+      <ObjectId>16429</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
     <role id="5" parent="1" name="pg_database_owner">
@@ -4233,7 +4233,7 @@ sequence|table|16465|16466|1
     <schema id="263" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>4711</IntrospectionStateNumber>
+      <IntrospectionStateNumber>4722</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>527</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4252,7 +4252,7 @@ sequence|table|16465|16466|1
     </sequence>
     <table id="266" parent="263" name="t_items">
       <ObjectId>16457</ObjectId>
-      <StateNumber>4704</StateNumber>
+      <StateNumber>4720</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -4291,7 +4291,19 @@ sequence|table|16465|16466|1
       <StateNumber>4704</StateNumber>
       <TypeId>700</TypeId>
     </column>
-    <index id="272" parent="266" name="t_items_pkey">
+    <column id="272" parent="266" name="sold">
+      <DataType>integer|0s</DataType>
+      <Position>5</Position>
+      <StateNumber>4717</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="273" parent="266" name="arrival_date">
+      <DataType>date|0s</DataType>
+      <Position>6</Position>
+      <StateNumber>4720</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <index id="274" parent="266" name="t_items_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16463</ObjectId>
@@ -4300,14 +4312,14 @@ sequence|table|16465|16466|1
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="273" parent="266" name="t_items_pkey">
+    <key id="275" parent="266" name="t_items_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16464</ObjectId>
       <Primary>1</Primary>
       <StateNumber>4704</StateNumber>
       <UnderlyingIndexId>16463</UnderlyingIndexId>
     </key>
-    <column id="274" parent="267" name="id">
+    <column id="276" parent="267" name="id">
       <DataType>integer|0s</DataType>
       <DefaultExpression>nextval(&apos;t_users_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4315,27 +4327,27 @@ sequence|table|16465|16466|1
       <StateNumber>4707</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="275" parent="267" name="email">
+    <column id="277" parent="267" name="email">
       <DataType>varchar(60)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>4707</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="276" parent="267" name="password">
+    <column id="278" parent="267" name="password">
       <DataType>varchar(60)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>4707</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="277" parent="267" name="full_name">
+    <column id="279" parent="267" name="full_name">
       <DataType>varchar(60)|0s</DataType>
       <Position>4</Position>
       <StateNumber>4707</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="278" parent="267" name="t_users_pkey">
+    <index id="280" parent="267" name="t_users_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16470</ObjectId>
@@ -4344,7 +4356,7 @@ sequence|table|16465|16466|1
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="279" parent="267" name="t_users_pkey">
+    <key id="281" parent="267" name="t_users_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16471</ObjectId>
       <Primary>1</Primary>

@@ -9,32 +9,34 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.AbstractMap;
 import java.util.ArrayList;
 
-@WebServlet (name = "AuthenticationServlet", value = "/authentication")
-public class AuthenticationServlet extends HttpServlet {
+@WebServlet (name = "EditUserDataServlet", value = "/edit-user-data")
+public class EditUserDataServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.sendRedirect("JSPs/authentication.jsp");
+
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        boolean isValid = false;
-        Long id = null;
+        Long id = Long.parseLong(request.getParameter("id"));
         String email = request.getParameter("email");
         String password = request.getParameter("password");
+        String fullName = request.getParameter("name");
 
-        ArrayList<User> users = DBManager.getUsers();
-        for (User user : users) {
-            if (user.getEmail().equals(email) && user.getPassword().equals(password)) {
-                isValid = true;
-                id = user.getId();
-            }
+        User user = DBManager.getUser(id);
+
+        if (user != null) {
+            user.setId(id);
+            user.setFullName(fullName);
+            user.setEmail(email);
+            user.setPassword(password);
+
+            DBManager.updateUserData(user);
+            response.sendRedirect("/user-profile?id=" + id);
         }
 
-        if (isValid) {
-            response.sendRedirect("/user-profile?id=" + id);
-        };
     }
 }

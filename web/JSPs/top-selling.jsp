@@ -11,7 +11,7 @@
   <div class="row">
     <div class="col-6 mx-auto text-center" style="color: #2B2D42;">
       <h1>Top Sellers!</h1>
-      <h5>Browse our list of highest trending products</h5>
+      <h5>Browse our list of trending products</h5>
     </div>
   </div>
   <div class="row col-8 mx-auto mt-5">
