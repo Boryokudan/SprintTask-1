@@ -7,24 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9129f32a-7dfd-4217-9c44-a9ff4cfb9410" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/833c2f53-c4fb-4ecb-9a93-9305fd3d4d71.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/833c2f53-c4fb-4ecb-9a93-9305fd3d4d71.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/833c2f53-c4fb-4ecb-9a93-9305fd3d4d71/storage_v2/_src_/database/bootcamp.c-wBeA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/833c2f53-c4fb-4ecb-9a93-9305fd3d4d71/storage_v2/_src_/database/bootcamp.c-wBeA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Servlets/AuthenticationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servlets/AuthenticationServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DBManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/JSPs/authentication.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/JSPs/authentication.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/JSPs/edit-user-modal.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/JSPs/edit-user-modal.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/JSPs/head.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/elements/head.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/JSPs/new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/JSPs/new.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/JSPs/top-selling.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/JSPs/top-selling.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/JSPs/user-profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/JSPs/user-profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/elements/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/elements/footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/elements/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/elements/navbar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/item_images/msi_samurai_black_red.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/img/item_images/msi_samurai_black_red.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +176,7 @@
       <workItem from="1664013204878" duration="16638000" />
       <workItem from="1664091048581" duration="25907000" />
       <workItem from="1664184457661" duration="3746000" />
-      <workItem from="1664274108326" duration="6429000" />
+      <workItem from="1664274108326" duration="7577000" />
     </task>
     <servers />
   </component>
