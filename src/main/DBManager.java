@@ -106,6 +106,9 @@ public class DBManager {
                 item.setName(resultSet.getString("name"));
                 item.setDescription(resultSet.getString("description"));
                 item.setPrice(resultSet.getDouble("price"));
+                item.setPiecesSold(resultSet.getInt("sold"));
+                item.setArrivalDate(resultSet.getString("arrival_date"));
+                item.setImageSource(resultSet.getString("image_source"));
 
                 items.add(item);
             }
@@ -131,6 +134,9 @@ public class DBManager {
                 item.setName(resultSet.getString("name"));
                 item.setDescription(resultSet.getString("description"));
                 item.setPrice(resultSet.getDouble("price"));
+                item.setPiecesSold(resultSet.getInt("sold"));
+                item.setArrivalDate(resultSet.getString("arrival_date"));
+                item.setImageSource(resultSet.getString("image_source"));
 
                 items.add(item);
             }
@@ -156,6 +162,9 @@ public class DBManager {
                 item.setName(resultSet.getString("name"));
                 item.setDescription(resultSet.getString("description"));
                 item.setPrice(resultSet.getDouble("price"));
+                item.setPiecesSold(resultSet.getInt("sold"));
+                item.setArrivalDate(resultSet.getString("arrival_date"));
+                item.setImageSource(resultSet.getString("image_source"));
 
                 items.add(item);
             }

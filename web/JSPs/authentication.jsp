@@ -1,12 +1,23 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-    <%@include file="head.jsp"%>
+    <%@include file="../elements/head.jsp"%>
     <body class="grad">
         <%@include file="/elements/navbar.jsp"%>
         <div class="container d-flex justify-content-center">
             <div class="row col-6 rounded align-self-center" style="background-color: #f7f7ff;">
                 <div class="col-12 p-5 pb-4">
                     <form action="/authentication" method="post">
+                        <%
+                            String status = request.getParameter("status");
+                            System.out.println(status);
+                            if (status != null && status.equals("invalid")) {
+                        %>
+                                    <div class="alert alert-danger" role="alert">
+                                        Invalid <strong>email</strong> or <strong>password</strong>. Try again!
+                                    </div>
+                        <%
+                            }
+                        %>
                         <div class="mb-3 ">
                             <label for="exampleInputEmail" class="form-label">Email address</label>
                             <input type="email" class="form-control" id="exampleInputEmail" name="email" aria-describedby="emailHelp">

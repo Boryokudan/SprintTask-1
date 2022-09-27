@@ -20,7 +20,6 @@ public class AuthenticationServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        boolean isValid = false;
         Long id = null;
         String email = request.getParameter("email");
         String password = request.getParameter("password");
@@ -28,13 +27,15 @@ public class AuthenticationServlet extends HttpServlet {
         ArrayList<User> users = DBManager.getUsers();
         for (User user : users) {
             if (user.getEmail().equals(email) && user.getPassword().equals(password)) {
-                isValid = true;
                 id = user.getId();
             }
         }
 
-        if (isValid) {
+        if (id != null) {
             response.sendRedirect("/user-profile?id=" + id);
-        };
+        }
+        else {
+            response.sendRedirect("JSPs/authentication.jsp?status=invalid");
+        }
     }
 }

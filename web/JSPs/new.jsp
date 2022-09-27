@@ -3,7 +3,7 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<%@include file="../JSPs/head.jsp"%>
+<%@include file="../elements/head.jsp"%>
 <html>
 <%@include file="../elements/navbar.jsp"%>
 <body class="grad">
@@ -15,7 +15,6 @@
     </div>
   </div>
   <div class="row col-8 mx-auto mt-5">
-    <div class="card-group">
       <%
         ArrayList<Item> items = (ArrayList<Item>) request.getAttribute("items");
 
@@ -23,8 +22,8 @@
           String price = String.format("%.2f", item.getPrice());
       %>
       <div class="col-4">
-        <div class="card bg-main p-1 m-2">
-          <img src="https://lap.kz/wp-content/uploads/2020/10/apple-macboo-pro-touch-bar-15-retina-512gb-silver-4-1000x1000-1-300x300.png" class="card-img-top" alt="...">
+        <div class="card bg-main p-1 m-1 my-3">
+          <img src="../<%= item.getImageSource() %>" class="card-img-top" height="250" alt="item_image">
           <div class="card-body text-center">
             <h4 class="card-title mb-2"><%= item.getName() %></h4>
             <h5 class="card-price mb-2"><strong>$<%= price %></strong></h5><hr>
@@ -36,7 +35,6 @@
       <%
         }
       %>
-    </div>
   </div>
 </div>
 <%@include file="../elements/footer.jsp"%>

@@ -1,7 +1,7 @@
 <%@ page import="main.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<%@include file="head.jsp"%>
+<%@include file="../elements/head.jsp"%>
 <body class="grad">
 <%@include file="/elements/navbar.jsp"%>
 <div class="container d-flex justify-content-center">
@@ -26,9 +26,11 @@
                     <label for="exampleInputPassword" class="form-label">Password:</label>
                     <input type="password" class="form-control" id="exampleInputPassword" name="password" value="<%= user.getPassword() %>" disabled>
                 </div>
-                <button type="button" class="btn btn-main mb-3 align-self-center" data-bs-toggle="modal" data-bs-target="#editUserModal">
-                    Edit
-                </button>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-main w-50 mt-4" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                        Edit
+                    </button>
+                </div>
             </form>
             <%@include file="edit-user-modal.jsp"%>
         </div>

@@ -50,8 +50,8 @@
         </form>
       </div>
 
-      <div class="modal-footer">
-        <button type="button" class="btn btn-main col-12 mx-auto" data-bs-dismiss="modal">Cancel</button>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-main w-50" data-bs-dismiss="modal">Cancel</button>
       </div>
     </div>
   </div>
