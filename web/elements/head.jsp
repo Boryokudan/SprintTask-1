@@ -1,5 +1,5 @@
 <head>
-  <title>Zero-to-One Shop</title>
+  <title>Epsilon Store</title>
 <%--  Bootstrap CSS and JS--%>
   <link type="text/css" rel="stylesheet" href="../bootstrap/css/bootstrap.css">
   <link type="text/css" rel="stylesheet" href="../css/main.css">

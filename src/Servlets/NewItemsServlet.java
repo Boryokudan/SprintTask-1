@@ -17,7 +17,7 @@ public class NewItemsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ArrayList<Item> items = DBManager.getNewItems();
         request.setAttribute("items", items);
-        request.getRequestDispatcher("/JSPs/new.jsp").forward(request, response);
+        request.getRequestDispatcher("/JSPs/new-items.jsp").forward(request, response);
     }
 
     @Override

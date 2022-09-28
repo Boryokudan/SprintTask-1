@@ -7,10 +7,18 @@
             </button>
         </div>
         <div class="navbar-nav justify-content-end">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
-            <a class="nav-link" href="/top-selling">Top Selling</a>
-            <a class="nav-link" href="/new">New</a>
-            <a class="nav-link me-4" href="/authentication">Sign In</a>
+            <div class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link" href="/top-selling">Top Selling</a>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link" href="/new">New</a>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link me-4" href="/authentication">Sign In</a>
+            </div>
         </div>
     </div>
 </nav>

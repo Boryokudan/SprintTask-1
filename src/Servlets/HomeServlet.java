@@ -17,7 +17,7 @@ public class HomeServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ArrayList<Item> items = DBManager.getItems();
         request.setAttribute("items", items);
-        request.getRequestDispatcher("/index.jsp").forward(request, response);
+        request.getRequestDispatcher("JSPs/home.jsp").forward(request, response);
     }
 
     @Override

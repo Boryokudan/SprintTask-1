@@ -3,9 +3,9 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<%@include file="elements/head.jsp"%>
+<%@include file="../elements/head.jsp"%>
 <html>
-    <%@include file="elements/navbar.jsp"%>
+    <%@include file="../elements/navbar.jsp"%>
     <body class="grad">
         <div class="container">
             <div class="row">
@@ -23,7 +23,7 @@
                     %>
                             <div class="col-4">
                                 <div class="card bg-main p-1 m-1 my-3">
-                                    <img src="<%= item.getImageSource() %>" class="card-img-top" height="250" alt="item_image">
+                                    <img src="../<%= item.getImageSource() %>" class="card-img-top" height="250" alt="item_image">
                                     <div class="card-body text-center">
                                         <h4 class="card-title mb-2"><%= item.getName() %></h4>
                                         <h5 class="card-price mb-2"><strong>$<%= price %></strong></h5><hr>
@@ -37,6 +37,6 @@
                     %>
             </div>
         </div>
-        <%@include file="elements/footer.jsp"%>
+        <%@include file="../elements/footer.jsp"%>
     </body>
 </html>
