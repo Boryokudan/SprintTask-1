@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Optional;
 
 @WebServlet (name = "AuthenticationServlet", value = "/authentication")
 public class AuthenticationServlet extends HttpServlet {
@@ -20,18 +21,17 @@ public class AuthenticationServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Long id = null;
         String email = request.getParameter("email");
         String password = request.getParameter("password");
 
         ArrayList<User> users = DBManager.getUsers();
-        for (User user : users) {
-            if (user.getEmail().equals(email) && user.getPassword().equals(password)) {
-                id = user.getId();
-            }
-        }
+        Optional<User> userOptional = users.stream()
+                .filter(user -> user.getEmail().equals(email) && user.getPassword().equals(password))
+                .findFirst();
 
-        if (id != null) {
+        if (userOptional.isPresent()) {
+            User user = userOptional.get();
+            Long id = user.getId();
             response.sendRedirect("/user-profile?id=" + id);
         }
         else {
